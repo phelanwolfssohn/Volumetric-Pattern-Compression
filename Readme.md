@@ -125,6 +125,23 @@ Wird der 50-cm-Acrylblock mit diesem feineren Rastermaß von **0,2 mm** (statt 5
 #### VOMCS-Effekt im Praxiseinsatz:
 Durch das adaptive Inode-Framework und die Mustersuche der KI (angenommener Kompressionsfaktor von 1:4 bei strukturierten Daten) speichert dieser via 3D-Drucker ausgelesene Block **virtuell bis zu 8 Gigabyte an Daten**. Damit lässt sich eine komplette Filmdatei in Full-HD-Qualität auf einem passiven Stück Kunststoff hinterlegen und mit Consumer-Elektronik latenzfrei dekodieren.
 
+## 🧪 Additive Fertigung im Mikrobereich (Das SLA-Harzdruck-Verfahren)
+
+Als hocheffiziente, kostengünstige und extrem präzise Produktionsmethode für VOMCS-Medien im Heimbereich hat sich der MSLA/LCD-3D-Druck (z. B. mittels *Elegoo Mars*) erwiesen. Da diese Drucker Schichten flüssigen Harzes (Resin) mittels eines hochauflösenden Displays flächig belichten, arbeiten sie nach demselben parallelen Prinzip wie der VOMCS-Scanner.
+
+### 1. Physische Parameter (Das Zauberwürfel-Modell)
+Unter Ausnutzung des Bauraums eines Standard-Consumer-Druckers wird ein Testwürfel mit folgenden Eigenschaften definiert:
+* **Außenmaße:** $6 \times 6 \times 6\text{ cm}$ (Volumen eines kompakten Zauberwürfels).
+* **Rastermaß:** 0,2 mm in allen drei Raumachsen (X, Y, Z).
+* **Druck-Matrix:** $300 \times 300 \times 300$ Bildpunkte.
+* **Physische Kapazität:** $27.000.000\text{ Bits}$ (~3,37 Megabyte physischer Netto-Speicher).
+* **Virtuelle VOMCS-Kapazität:** Durch das Inode-Framework und die KI-Mustersuche speichert dieser kompakte Block **virtuell bis zu 13 Megabyte** an Audiodaten oder Texten.
+
+### 2. Die physikalische Bit-Kodierung im Harz
+Als Material wird industrielles, glasklares UV-Harz (Clear Resin) verwendet. Die zwei Zustände werden durch gezielte optische Manipulation während des Druckprozesses erzeugt:
+
+* **Zustand `0` (Weiß):** Das Harz wird mit den Standard-Herstellerwerten homogen ausgehärtet. Es bleibt im nahen Infrarotbereich (NIR) perfekt transparent. Der Laserstrahl passiert die Zelle ungehindert.
+* **Zustand `1` (Schwarz):** Der Drucker erzeugt an dieser Koordinate eine **Kavität (einen Mikro-Hohlraum)** mit einem Durchmesser von 0,1 mm. Nach dem Waschen und Nachhärten bleibt in diesem Hohlraum Luft eingeschlossen. Beim Abtasten durch den IR-Linienlaser sorgt der abrupte Wechsel des Brechungsindex zwischen Harz und Luft für eine perfekte Lichtstreuung, die von der IR-Kamera als strahlender Punkt erfasst wird.
 
 ## 🌐 Das VOMCS Shared-Matrix-Paradigma (Zero-Transport-Transfer)
 
