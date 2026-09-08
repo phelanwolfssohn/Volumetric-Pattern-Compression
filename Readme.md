@@ -33,22 +33,18 @@ Die KI und der Lese-Algorithmus nutzen zur Datenintegration verschiedene geometr
   Tastet den Würfel in konzentrischen 3D-Hüllen von außen nach innen zum Kern ab. Perfekt für hoch-entropische Datenströme.
 
 
-# VOMCS - Volumetric Open Multi-Pattern Compression Standard
+# VOMCS — Volumetric Open Multi-Pattern Compression Standard
+**Spezifikation v1.1 — Offener Speicher- und Übertragungs-Standard**
 
-Dieses Repository enthält die theoretische Spezifikation für ein adaptives, 
-geometrisches 3D-Datenkompressionsverfahren für holografische und volumetrische Speichermedien.
+VOMCS ist ein plattformunabhängiges, rein logisch-geometrisches Framework. Das Verfahren ist universell anwendbar und sowohl in seiner physischen Umsetzung (volumetrische Medien) als auch als reines, softwarebasiertes Datenkompressionsverfahren (virtuelle Layer-Kompression) vollumfänglich geschützt.
 
 ## ⚖️ Lizenz & Rechtlicher Hinweis (Stand der Technik)
-Dieses Konzept wird hiermit als **Open Source** der Allgemeinheit zur Verfügung gestellt. 
-Mit der Veröffentlichung auf GitHub ist diese Technologie offiziell Teil des globalen 
-**Stands der Technik (Prior Art)**. Eine exklusive Patentierung oder kommerzielle Monopolisierung 
-dieses Verfahrens durch Dritte ist damit rechtlich ausgeschlossen.
+Dieses Konzept wird hiermit als **Open Source** der Allgemeinheit zur Verfügung gestellt. Mit der Veröffentlichung auf GitHub ist diese Technologie offiziell Teil des globalen **Stands der Technik (Prior Art)**. Eine exklusive Patentierung oder kommerzielle Monopolisierung dieses Verfahrens oder darauf basierender Algorithmen durch Dritte ist damit rechtlich ausgeschlossen.
 
-**Nutzungsbedingungen:**
-* **Non-Profit & Forschung:** Die private, wissenschaftliche und gemeinnützige Nutzung, 
-  Modifikation und Weiterentwicklung ist ausdrücklich erlaubt und kostenfrei.
-* **Kommerzielle Nutzung:** Jede kommerzielle Verwertung oder Implementierung in proprietäre 
-  Produkte bedarf der ausdrücklichen Genehmigung und Lizenzierung durch den Urheber.
+**Nutzungsbedingungen (CC BY-NC 4.0):**
+* **Non-Profit & Forschung:** Die private, wissenschaftliche und gemeinnützige Nutzung, Modifikation, digitale Simulation und Weiterentwicklung ist ausdrücklich erlaubt und kostenfrei.
+* **Kommerzielle Nutzung:** Jede kommerzielle Verwertung, Nutzung im geschäftlichen Betrieb (physisch oder als Software-Implementierung) oder die Einbindung in proprietäre Produkte ist ohne vorherige, schriftliche und kostenpflichtige Lizenzierung durch den Urheber untersagt.
+
 
   
 ## 🔍 Abgrenzung zum Stand der Technik (State of the Art)
