@@ -83,3 +83,25 @@ Um das mathematische Kernprinzip von VOMCS greifbar zu machen, lässt es sich du
 * **Klassische Verschlüsselung:** Ein digitaler Schlüssel füttert einen mathematischen Algorithmus, um eine lange Reihe von Zufallszahlen zu generieren.
 * **Das VOMCS-Prinzip:** Der 3D-Würfel dient als physischer, unknackbarer Datentresor. Da die `MUSTER_ID` in den Inodes bestimmt, wie die Spirale abbiegt oder wo die Hilbert-Kurve ansetzt, entstehen aus den exakt gleichen 27 Start-Bits Milliarden unterschiedlicher Schlüsselketten. Ohne die exakte Muster-Reihenfolge ist es mathematisch unmöglich, die versteckte zweite Datei zu rekonstruieren.
 
+## 🛠️ Der Low-Cost-Hardware-Beweis (Das 50-cm-Makromodell)
+
+Um zu demonstrieren, dass VOMCS ein rein logisch-geometrisches Framework ist und keine teuren Quantenlaser benötigt, lässt sich ein physisches 1-Megabit-Speichermedium für unter 50 € Materialkosten realisieren:
+
+### 1. Die Hardware-Spezifikationen
+* **Das Medium:** Ein gegossener Acrylglas-Block (PMMA) mit einer Kantenlänge von **50 cm**.
+* **Das Raster:** Ein 3D-Koordinatennetz mit 5 mm Abstand. Dies ergibt eine physische Matrix von $100 \times 100 \times 100$ Rasterpunkten.
+* **Kapazität (Physisch):** Exakt 1.000.000 Speicherzellen (**1 Megabit**).
+* **Die Bit-Kodierung:** 
+  * `0` (Weiß) = Unberührtes, perfekt transparentes Acrylglas.
+  * `1` (Schwarz) = Ein physischer Defekt (z. B. eine 1-mm-Bohrung oder eine per 3D-Innengravur erzeugte Mikro-Luftblase), der Licht bricht und streut.
+
+### 2. Das kostengünstige Ausleseverfahren (Lichtschnitt-Scannen)
+Anstatt teurer Time-of-Flight (ToF) Kameras, die Pikosekunden-Laufzeiten messen müssten, nutzt dieser Aufbau ein einfaches optisches Schichtverfahren (Light-Sheet Illumination):
+
+* **Der Schicht-Laser:** Ein handelsüblicher Infrarot-Linienlaser (NIR, ca. 850 nm) wirft eine hauchdünne, flache Lichtscheibe von der Seite in den Block.
+* **Die mechanische Achse:** Der Laser (oder der Block) wird auf einer einfachen Gewindestange mit einem billigen Schrittmotor (3D-Drucker-Ersatzteil) montiert, um den Block Schicht für Schicht im 5-mm-Rhythmus von unten nach oben zu durchfahren.
+* **Der Sensor:** Eine kostengünstige Infrarot-Kamera (z. B. Raspberry Pi NoIR-Kamera für ~10 €) blickt von vorne auf den Block.
+* **Der Scan-Vorgang:** Sobald der Linienlaser Schicht 1 durchleuchtet, treffen die Infrarotstrahlen *nur* auf die dort liegenden Defekte (`1`). Diese fangen an zu leuchten (Streulicht). Das restliche Acryl bleibt unsichtbar. Die Kamera schießt ein normales 2D-Bild ($100 \times 100$ Pixel) und liest damit **10.000 Bits gleichzeitig auf einmal aus**.
+
+### 3. VOMCS-Integration
+Nach 100 Fotos ist der gesamte Würfel digitalisiert. Die KI übernimmt den resultierenden 1-Megabit-Schachbrett-Stream, sucht nach Übereinstimmungen für Sekundärdateien und steuert das Auslesen fortan über die adaptiven **Muster-IDs (z. B. deine linksdrehende Spirale)**, die rein logisch in der Inode-Schicht operieren.
