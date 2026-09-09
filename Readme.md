@@ -7,7 +7,16 @@ Das Speichermedium basiert auf einem dreidimensionalen, volumetrischen Bit-Gitte
 * **Physische Dimension:** 3x3x3 Speicherzellen (Bits) für das Basismodell (skalierbar auf 228x228x228 für Megabit-Strukturen).
 * **Zentraler Hardware-Anker:** Die absolute Mitte des Würfels (Koordinate `1,1,1` beim Basismodell) ist fest als Synchronisationsmarker auf den Zustand `1` (Schwarz) fixiert. Er dient der optischen Kalibrierung (Verzerrungs- und Laufzeitkorrektur).
 * **Signalform:** Daten werden durch ein 3-Achsen-Interferenzverfahren (X, Y, Z) eingelesen, wodurch im Inneren ein stationäres 3D-Schachbrettmuster entsteht.
+### 1.1 Variable Kalibrierungsverfahren & Nullpunktbestimmung
+Der VOMCS-Standard schreibt keine starre Methode zur Lage- und Laufzeitkorrektur vor. Die Bestimmung des räumlichen Nullpunkts kann je nach Einsatzzweck über drei gleichwertige, adaptive Verfahren erfolgen:
 
+* **Verfahren A — Der Zentral-Marker (Physischer Anker):** 
+  Die absolute geometrische Mitte der Matrix (z. B. Koordinate `150,150,150`) wird als statische Synchronisations-Eins (`1`) fixiert. Optimal für strukturierte Sprach- und Mediendatenwürfel mit vordefinierten Scan-Pfaden.
+* **Verfahren B — Mechanische Gehäuse-Referenzierung (Nullpunkt-Führung):** 
+  Der VOMCS-Körper wird über eine hochpräzise mechanische Führungsnut (Formschluss) im Lesegerät fixiert. Die Nullpunkt-Bestimmung erfolgt rein hardwareseitig über die kalibrierten Endschalter der Scan-Achsen. Ein Marker im Datenraum ist bei diesem Verfahren obsolet.
+* **Verfahren C — Virtuelles Sternenbild-Matching (Algorithmisches Tracking):** 
+  Speziell für hochentropische Chaos-Bitmatrizen (Rausch-Speicher). Die Software gleicht das von der Kamera erfasste, zufällige Pixelmuster der Randbereiche mit dem mathematischen Soll-Muster des bekannten Generierungs-Seeds ab. Aus der Verschiebung des "Sternenbilds" errechnet die KI in Echtzeit die Lagekorrektur im Raum.
+  
 ### 2. Die adaptive Inode-Schicht (Logische Ebene)
 Folgedateien werden nicht physisch neu in den Würfel geschrieben, sondern als rein relationale Geometrie-Verweise (Pointer) in dedizierten Index-Ebenen oder extern gelagert. 
 
