@@ -61,6 +61,11 @@ Zur Wahrung der Erfindungshöhe und zur rechtlichen Absicherung gegen Fehlinterp
 * **Der traditionelle Ansatz:** Datenpunkte werden in starren, hierarchischen Baumstrukturen oder entlang vordefinierter, unelastischer Scan-Pfade (z. B. linear oder per Zickzack) adressiert.
 * **Die VOMCS-Innovation:** Der Abtastpfad selbst ist im VOMCS-Pointer als **dynamische Variable (`MUSTER_ID`) auf Inode-Ebene** hinterlegt. Derselbe physische 3D-Speicherpunkt wird je nach Bedarf via Spirale, Hilbert-Kurve oder Schalen-Scan uminterpretiert. Das gab es in dieser Form in keinem Dateisystem.
 
+* #### Abgrenzung zum klassischen optischen Winkel-Multiplexing (z. B. Psaltis et al., Caltech 1995)
+* **Der historische Ansatz (1995):** Physisches, optisches Winkel-Multiplexing in photorefraktiven Kristallen (wie Lithiumniobat). Hierbei müssen reale Laserstrahlen mechanisch im Raum gekippt und präzise eingewinkelt werden, um holografische Schichten zu trennen. Das Verfahren ist rein hardwarebasiert und erfordert hochpräzise optische Mechaniken.
+* **Die VOMCS-Innovation:** VOMCS virtualisiert diesen Vorgang vollständig. Das physische Medium (der gegossene/gedruckte Würfel) verbleibt in einem absolut statischen Zustand. Es erfolgt keinerlei mechanische oder optische Strahlkippung. Stattdessen berechnet die Inode-Schicht die Raumwinkel rein virtuell auf Software-Ebene. VOMCS überführt ein komplexes Hardware-Verfahren damit in ein rein logisch-geometrisches Software-Framework.
+* 
+
 ---
 
 ### 💡 Veranschaulichung durch Alltagsszenarien
