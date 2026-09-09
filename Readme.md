@@ -47,6 +47,26 @@ Die KI und der Lese-Algorithmus nutzen zur Datenintegration verschiedene geometr
 
 VOMCS ist ein plattformunabhängiges, rein logisch-geometrisches Framework. Das Verfahren ist universell anwendbar und sowohl in seiner physischen Umsetzung (volumetrische Medien) als auch als reines, softwarebasiertes Datenkompressionsverfahren (virtuelle Layer-Kompression) vollumfänglich geschützt.
 
+## 🧲 Das GAUSS-Abtastverfahren (Magnetische Feldfluktuation)
+
+Als alternative und berührungslose High-End-Abtastmethode unterstützt der Standard das **GAUSS-Verfahren (Magnetic Flux Density Scan)**. Diese Methode transformiert das VOMCS-Medium von einem rein optischen Körper in ein passives, dreidimensionales Magnetfeld-Schachbrett. 
+
+Unter dem Markennamen **GAUSS Genode(Speicher-"würfel")** und **GAUSS Shard (Pointer-Komponente)** operiert das logisch-geometrische Framework hierbei auf atomaren Magnetschmuggelfeldern.
+
+### 1. Physische Bit-Dotierung (Die magnetische Matrix)
+Anstatt Hohlräume oder optische Schlieren zu erzeugen, wird das Trägermedium (Harz oder Glas) während des Produktionsprozesses im *Writer* molekular dotiert:
+* **Zustand `0`:** Reines, diamagnetisches oder unmagnetisches Basismaterial. Das Magnetfeld bleibt völlig homogen.
+* **Zustand `1`:** Punktuelle Injektion von ferromagnetischen Nanopartikeln (z. B. Neodym-Staub oder Eisenoxid-Cluster) im Mikrometerbereich. Jedes gesetzte Bit erzeugt eine permanente, winzige Verzerrung der lokalen magnetischen Flussdichte.
+
+### 2. Die GAUSS-Scanner-Schnittstelle (Das Lesegerät)
+Das Auslesen erfolgt vollständig ohne Laser und Kamerasysteme, was die Resilienz gegenüber optischen Verschmutzungen auf Null reduziert:
+* **Der Sensor:** Das Lesegerät nutzt ein hochsensibles Array aus **GMR-Sensoren (Giant Magnetoresistance)** oder TMR-Sensoren (Tunnel-Magnetowiderstand), um Fluktuationen der magnetischen Flussdichte im Bereich von Mikro-Gauß zu erfassen.
+* **Die Induktions-Abtastung:** Während der VOMCS-Kristall berührungslos am Sensor-Array vorbeigeführt wird, misst das Gaußmeter die winzigen dreidimensionalen Feldstörungen. 
+
+### 3. VOMCS-Integration & Pointer-Abgleich
+Die erfassten magnetischen Feldstörungen werden instantan als mathematische Matrix im Arbeitsspeicher rekonstruiert. Die nachgelagerte KI-Engine wendet die bekannten Inode-Pointer (z. B. das **80-Bit-Winkel-Layout des virtuellen D20-Bombardements**) auf diese Magnet-Matrix an, um die Daten latenzfrei und ohne Payload zu extrahieren.
+
+
 ## ⚖️ Lizenz & Rechtlicher Hinweis (Stand der Technik)
 Dieses Konzept wird hiermit als **Open Source** der Allgemeinheit zur Verfügung gestellt. Mit der Veröffentlichung auf GitHub ist diese Technologie offiziell Teil des globalen **Stands der Technik (Prior Art)**. Eine exklusive Patentierung oder kommerzielle Monopolisierung dieses Verfahrens oder darauf basierender Algorithmen durch Dritte ist damit rechtlich ausgeschlossen.
 
