@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import math
-import json
+import struct
 import os
 
 class GaussFileManager:
@@ -30,7 +30,10 @@ class GaussFileManager:
             f.write(byte_arr)
 
     def get_d20_ray_path(self, start_pos, direction_list, length):
+        """Berechnet den 3D-Pfad einer Ikosaeder-Achse durch das Raster (Raycasting)."""
         x0, y0, z0 = start_pos
+        
+        # JETZT ABSOLUT REIN: Einzelner Index-Zugriff befreit uns von jedem Typenfehler!
         dx = float(direction_list[0])
         dy = float(direction_list[1])
         dz = float(direction_list[2])
@@ -53,9 +56,11 @@ class GaussFileManager:
         return path
 
     def generate_d20_axis(self, alpha, beta, gamma):
+        """Generiert eine rotierte Ikosaeder-Hauptachse mittels reinem Python math."""
         phi = (1.0 + math.sqrt(5.0)) / 2.0
         x, y, z = 1.0, 1.0 / phi, phi
         
+        # 3D-Rotationen über Standard-Math
         x1 = x
         y1 = y * math.cos(alpha) - z * math.sin(alpha)
         z1 = y * math.sin(alpha) + z * math.cos(alpha)
@@ -70,32 +75,32 @@ class GaussFileManager:
         
         return [x3, y3, z3]
 
-    def compile_to_files(self, source_file, output_geode_path, output_shard_path):
-        print(f"--- START GAUSS COMPILER (Geoden-Groesse: {self.size}^3) ---")
+    def compile_to_files(self, source_file, output_geode_path, output_bin_shard_path):
+        print(f"--- START GAUSS BINARY COMPILER (Geode: {self.size}^3) ---")
         if not os.path.exists(source_file):
-            print(f"⚠️ FEHLER: Die Datei '{source_file}' existiert nicht!")
+            print(f"⚠️ FEHLER: Quelldatei fehlt!")
             return False
             
         target_bits = self.file_to_bits(source_file)
         print(f"[System] Quelldatei geladen: {len(target_bits)} Bits ({len(target_bits)//8} Bytes).")
         
-        chunk_size = 128
+        # DER ELEMENTARE SWEET SPOT: 256 Bits (32 Bytes) pro Shard! Max-Auslastung der 500er-Geode.
+        chunk_size = 256
         bit_chunks = [target_bits[i:i+chunk_size] for i in range(0, len(target_bits), chunk_size)]
         
-        if len(bit_chunks) > 5000:
-            print(f"[Warnung] Begrenze PoC-Verarbeitung auf die ersten 5000 Fragmente.")
-            bit_chunks = bit_chunks[:5000]
+        if len(bit_chunks) > 2500:
+            print(f"[Warnung] Begrenze PoC-Verarbeitung für stabilen Massenlauf.")
+            bit_chunks = bit_chunks[:2500]
         
         total_protected_path = []
         belegte_koordinaten = set()
-        shard_list_metadata = []
         
+        binary_shard_data = bytearray()
+        valid_chunks_count = 0
         puffer = self.size - 50
         
         for idx, chunk in enumerate(bit_chunks):
             bahn_gefunden = False
-            
-            # UPGRADE: 50 Versuche statt 10 für maximale Weichenstellung im dichten Raum!
             for versuch in range(50):
                 alpha = 1.987 + idx * 0.005 + versuch * 0.05
                 beta  = 0.854 + idx * 0.005 + versuch * 0.05
@@ -115,24 +120,25 @@ class GaussFileManager:
                         total_protected_path.append((x, y, z))
                         belegte_koordinaten.add((x, y, z))
                     
-                    # LOGISCHES UPGRADE: Shard NUR speichern, wenn die Bahn glatt ging!
-                    shard_list_metadata.append({
-                        "alpha": alpha, "beta": beta, "gamma": gamma,
-                        "start": start_pos, "length": len(chunk)
-                    })
+                    # 💎 PURE REINE BINÄR-CODIERUNG (Exakt 20 Bytes per Shard!)
+                    packed_shard = struct.pack("<fffHHHH", 
+                        alpha, beta, gamma, 
+                        start_pos[0], start_pos[1], start_pos[2], 
+                        len(chunk)
+                    )
+                    binary_shard_data.extend(packed_shard)
+                    valid_chunks_count += 1
                     break
             
-            if not bahn_gefunden:
-                continue
+            if not bahn_gefunden: continue
             
-        print(f"[Phase 2] Flute restliches Feld zur Saettigung der Rauschmatrix...")
+        print(f"[Phase 2] Sättige Geoden-Feld mit Rauschen...")
         np.random.seed(self.seed)
         zufalls_rauschen = np.random.randint(0, 2, size=(self.size, self.size, self.size), dtype=np.uint8)
         
         mask = np.ones((self.size, self.size, self.size), dtype=bool)
         for (x, y, z) in total_protected_path:
             mask[x, y, z] = False
-            
         self.matrix[mask] = zufalls_rauschen[mask]
         
         packed_geode = np.packbits(self.matrix)
@@ -140,52 +146,54 @@ class GaussFileManager:
             f.write(packed_geode.tobytes())
         print(f"💾 Gauss Geode erfolgreich lokal exportiert: '{output_geode_path}'")
         
-        with open(output_shard_path, "w", encoding="utf-8") as f:
-            json.dump(shard_list_metadata, f, indent=4)
-        print(f"🔑 Gauss Shard-Verzeichnis erfolgreich lokal exportiert: '{output_shard_path}'")
+        with open(output_bin_shard_path, "wb") as f:
+            f.write(binary_shard_data)
+        print(f"🔑 BINÄRER GAUSS SHARD erfolgreich exportiert: '{output_bin_shard_path}' ({valid_chunks_count} Shards)")
         return True
 
-    def decompile_from_files(self, geode_path, shard_path, output_recovered_file):
-        print(f"\n--- START GAUSS RECONSTRUCTOR ---")
+    def decompile_from_files(self, geode_path, bin_shard_path, output_recovered_file):
+        print(f"\n--- START GAUSS BINARY RECONSTRUCTOR ---")
         
         with open(geode_path, "rb") as f:
             packed_data = np.frombuffer(f.read(), dtype=np.uint8)
-        
         unpacked_matrix = np.unpackbits(packed_data)
-        total_bits = self.size ** 3
-        self.matrix = unpacked_matrix[:total_bits].reshape((self.size, self.size, self.size))
-        print(f"📖 Gauss Geode erfolgreich von D-Platte eingelesen.")
+        self.matrix = unpacked_matrix[:self.size**3].reshape((self.size, self.size, self.size))
+        print(f"📖 Gauss Geode von D-Platte eingelesen.")
         
-        with open(shard_path, "r", encoding="utf-8") as f:
-            shard_chain = json.load(f)
-        print(f"🔑 Gauss Shard-Schlüssel erfolgreich geladen ({len(shard_chain)} Fragmente gefunden).")
+        with open(bin_shard_path, "rb") as f:
+            binary_data = f.read()
+            
+        shard_size = 20 
+        num_shards = len(binary_data) // shard_size
+        print(f"🔑 Binäre Shard-Kette geladen. Rekonstruiere {num_shards} Fragmente...")
         
         rekonstruierte_bits = []
-        for idx, shard in enumerate(shard_chain):
-            achse = self.generate_d20_axis(shard["alpha"], shard["beta"], shard["gamma"])
-            pfad = self.get_d20_ray_path(shard["start"], achse, shard["length"])
+        for i in range(num_shards):
+            offset = i * shard_size
+            shard_packet = binary_data[offset:offset+shard_size]
+            
+            alpha, beta, gamma, sx, sy, sz, length = struct.unpack("<fffHHHH", shard_packet)
+            
+            achse = self.generate_d20_axis(alpha, beta, gamma)
+            pfad = self.get_d20_ray_path((sx, sy, sz), achse, length)
             
             chunk_bits = [int(self.matrix[x, y, z]) for x, y, z in pfad]
             rekonstruierte_bits.extend(chunk_bits)
             
         self.bits_to_file(rekonstruierte_bits, output_recovered_file)
-        print(f"🎉 ZUSAMMENFÜGUNG ERFOLGREICH! Originaldatei wiederhergestellt unter: '{output_recovered_file}'")
+        print(f"🎉 BINÄRE EXTRAKTION ERFOLGREICH! Datei wiederhergestellt: '{output_recovered_file}'")
 
 if __name__ == "__main__":
-    # JETZT SIND DIE 500 DRAN! 🏎️💨
-    GEODEN_GROESSE = 500 
-    
+    GEODEN_GROESSE = 500
     manager = GaussFileManager(size=GEODEN_GROESSE, seed=1337)
     
     quell_datei = "beispiel.txt"
     geode_datei = "kristall.geode"
-    shard_datei = "schluessel.shard"
+    shard_datei = "schluessel.bin"
     rettungs_datei = "wiederhergestellt.txt"
     
     if manager.compile_to_files(quell_datei, geode_datei, shard_datei):
         manager.decompile_from_files(geode_datei, shard_datei, rettungs_datei)
-        
         if os.path.exists(rettungs_datei):
             with open(rettungs_datei, "r", encoding="utf-8", errors="ignore") as f:
-                inhalt = f.read(200)
-            print(f"\n🔍 Blick in die gerettete Datei (Erste 200 Zeichen): '{inhalt}...'")
+                print(f"\n🔍 Der unzerstörbare Blick ins Buch: '{f.read(150)}...'")
