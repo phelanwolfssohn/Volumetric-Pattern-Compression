@@ -19,7 +19,7 @@ class VomcsD20Bombardment:
     def get_d20_ray_path(self, start_pos, direction_vector, length):
         """
         Berechnet den 3D-Pfad einer Ikosaeder-Achse durch das diskrete Raster.
-        Nutzt einen 3D-Bresenham-Algorithmus (Raycasting), um die diskreten 
+        Nutzt einen 3D-Bresenham-Algorithmus (Raycasting) , um die diskreten 
         Pixelkoordinaten entlang des kontinuierlichen Raumvektors zu finden.
         """
         x0, y0, z0 = start_pos
