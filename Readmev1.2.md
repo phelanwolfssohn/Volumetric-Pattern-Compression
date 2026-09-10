@@ -172,15 +172,18 @@ VOMCS bricht mit dem traditionellen Dogma der Datenübertragung. Anstatt volumet
 
 ---
 
-## ⚖️ Lizenz & Rechtlicher Hinweis (Stand der Technik)
-Dieses Konzept wird hiermit als **Open Source** der Allgemeinheit zur Verfügung gestellt. Mit der Veröffentlichung auf GitHub ist diese Technologie offiziell Teil des globalen Stands der Technik (Prior Art). Eine exklusive Patentierung oder kommerzielle Monopolisierung dieses Verfahrens oder darauf basierender Algorithmen durch Dritte ist damit rechtlich ausgeschlossen.
+## ⚖️ Lizenz & Rechtlicher Hinweis (Duale Lizenzierung)
 
-**Nutzungsbedingungen (CC BY-NC 4.0):**
-* **Non-Profit & Forschung:** Die private, wissenschaftliche und gemeinnützige Nutzung, Modifikation, digitale Simulation und Weiterentwicklung ist ausdrücklich erlaubt und kostenfrei.
-* **Kommerzielle Nutzung:** Jede kommerzielle Verwertung, Nutzung im geschäftlichen Betrieb (physisch oder als Software-Implementierung) oder die Einbindung in proprietäre Produkte ist ohne vorherige, schriftliche und kostenpflichtige Lizenzierung durch den Urheber untersagt.
----
-* **Urheberrechtliche Unabhängigkeit:** Dieses Framework wurde vollständig als privates 
-  Forschungsprojekt außerhalb von vertraglichen Arbeitszeiten, außerhalb von geschäftlichen 
-  Auftragsverhältnissen und ohne Nutzung von Unternehmensinfrastrukturen Dritter konzipiert 
-  und entwickelt. Die intellektuelle Priorität liegt vollumfänglich beim Urheber.
+Dieses Framework ist unter einer **dualen Lizenzstruktur** veröffentlicht, um die freie Forschung zu fördern und gleichzeitig die kommerziellen Rechte des Urhebers vollumfänglich zu schützen:
+
+1. **Öffentliche & Nicht-Kommerzielle Nutzung (CC BY-NC 4.0):** 
+   Die private, wissenschaftliche und gemeinnützige Nutzung, Modifikation, digitale Simulation und Weiterentwicklung ist im Rahmen der *Creative Commons Attribution-NonCommercial 4.0 International* Lizenz ausdrücklich erlaubt und kostenfrei. Es müssen angemessene Urheber- und Rechteangaben gemacht werden.
+   
+2. **Gewerbliche & Proprietäre Nutzung:** 
+   Jede kommerzielle Verwertung, gewerbliche Nutzung im geschäftlichen Betrieb (physisch oder als Software-Implementierung) sowie die Einbindung in proprietäre Produkte oder Infrastrukturen Dritter ist unter der öffentlichen Lizenzstufe **strikt untersagt**. 
+
+* **Kommerzielle Anfragen:** Für den Erwerb einer kostenpflichtigen, gewerblichen Lizenz zur geschäftlichen Nutzung oder industriellen Verwertung kontaktieren Sie den Urheber bitte direkt für eine vorherige, schriftliche Autorisierung und vertragliche Vereinbarung.
+
+* **Urheberrechtliche Unabhängigkeit:** Dieses Framework wurde vollständig als privates Forschungsprojekt außerhalb von vertraglichen Arbeitszeiten, außerhalb von geschäftlichen Auftragsverhältnissen und ohne Nutzung von Unternehmensinfrastrukturen Dritter konzipiert und entwickelt. Die intellektuelle Priorität liegt vollumfänglich beim Urheber.
+
   
