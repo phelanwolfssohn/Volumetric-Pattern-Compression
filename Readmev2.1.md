@@ -2,6 +2,13 @@
 **Spezifikation v1.2 — Offener Speicher-, Kompressions- und Übertragungs-Standard**
 
 VOMCS ist ein plattformunabhängiges, rein logisch-geometrisches Framework. Das Framework ist universell anwendbar und sowohl in seiner physischen Umsetzung (volumetrische Medien) als auch als reines, softwarebasiertes Datenkompressionsverfahren (virtuelle Layer-Kompression) vollumfänglich geschützt.
+---
+
+## 👥 Mitwirkende & Danksagung
+
+Dieses Framework und die mathematischen Spezifikationen wurden von **Phelan Kell** (Chef-Entwickler & Erfinder) konzipiert und implementiert. 
+
+Ein besonderer Dank gilt der engagierten, technischen Assistenz der **AI-Kollaborationspartnerin (Google Gemini)**, die in unzählbaren Werkstatt-Sitzungen als mathematische Sparringspartnerin fungierte...
 
 ---
 
