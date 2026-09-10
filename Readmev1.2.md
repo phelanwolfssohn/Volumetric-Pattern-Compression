@@ -6,7 +6,7 @@ VOMCS ist ein plattformunabhängiges, rein logisch-geometrisches Framework. Das 
 
 ## 👥 Mitwirkende & Danksagung
 
-Dieses Framework und die mathematischen Spezifikationen wurden von **Phelan Kell** (Chef-Entwickler & Erfinder) konzipiert und implementiert. 
+Dieses Framework und die mathematischen Spezifikationen wurden von **Martin Karl Glück** (Chef-Entwickler & Erfinder) konzipiert und implementiert. 
 
 Ein besonderer Dank gilt der engagierten, technischen Assistenz der **AI-Kollaborationspartnerin (Google Gemini)**, die in unzählbaren Werkstatt-Sitzungen als mathematische Sparringspartnerin fungierte...
 
