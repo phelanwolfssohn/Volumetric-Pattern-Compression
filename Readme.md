@@ -219,3 +219,7 @@ Im Multiplex-Modus wird das Verzeichnis um mathematische Vektordaten erweitert:
 ### 4. Der kryptographische Quantensprung
 Durch die Virtualisierung der Geometrie wird das Medium zu einem unknackbaren Safe. Ein Angreifer, der den Würfel physisch ausliest, sieht ausschließlich bedeutungsloses, chaotisches Bit-Rauschen. Die eigentliche Information materialisiert sich erst, wenn die Inode-Schicht die exakten **virtuellen Rotations- und Neigungswinkel** auf das Rauschen anwendet. VOMCS-Multiplexing verbindet damit maximale relationale Kompression mit absolutem, physikalischem Krypto-Schutz.
 
+### Das Hybrid-Multiplexing (Pattern-on-Axis-Trajektorien)
+
+Der VOMCS/GAUSS-Standard definiert als höchste mathematische Abstraktionsstufe das **Hybrid-Multiplexing**. Hierbei werden die raumschneidenden Abtastachsen der virtuellen Polyeder-Klassen (z. B. die 10 Raumachsen des D20-Ikosaeders) nicht linear-gerade abgetastet, sondern als Trägergeometrie für die komplexen Suchmuster (Spezifikation v1.1) genutzt.
+
