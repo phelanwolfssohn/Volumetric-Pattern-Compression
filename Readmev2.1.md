@@ -51,6 +51,26 @@ Die KI und der Lese-Algorithmus nutzen zur Datenintegration, kollisionsfreien Mu
 * **Muster `0x03` — Boustrophedon-Raster (Zickzack):** Klassischer Zeilen-Scan mit alternierender Richtung. Optimal für sequentielle Textdaten.
 * **Muster `0x04` — Virtuelles Polyeder-Multiplexing (D20-Winkelabgleich):** In einer unstrukturierten Matrix berechnet die KI in der Inode-Schicht Tausende von virtuellen Ikosaedern (D20-Körpern), die im 3D-Raum in jedem Winkel frei rotiert und verschoben werden. Die Bits werden entlang der raumschneidenden Hauptachsen aus dem Chaos extrahiert. Um eine Folgedatei zu komprimieren, berechnet die KI die Neigung eines virtuellen Polyeders so lange, bis dessen Achsen exakt wie ein Schlüssel ins Schloss der Zieldaten passen.
 * **Muster `0x05` — Hybrid-Multiplexing (Pattern-on-Axis-Trajektorien):** Die mathematische Abstraktionsstufe des Standards. Komplexe Suchmuster (wie die 2D-Spirale) werden nicht mehr flach projiziert, sondern direkt auf die schrägen, im Raum rotierten Achsen des virtuellen D20-Körpers gelegt. Das Muster windet sich dreidimensional um die Achse herum. Dies maximiert die effektive Pfadlänge (> 1024 Bits) auf engstem Raum, ohne jemals die physischen Außengrenzen (Wände) der Geode zu verletzen.
+---
+
+## 4. Die Dreistufige KI-Orchestrations-Architektur (Die Master-Schicht)
+
+Um VOMCS/GAUSS universell über alle Datentypen hinweg (Linguistik, Bilddaten, 4K-Videoströme, FLAC-Audio, CAD-Geometrien) unendlich skalierbar und kollisionsfrei zu komprimieren, operiert das Framework auf einer dreistufigen, hierarchischen KI-Architektur.
+
+### 4.1 Stufe 1: Der Master-Orchestrator (Datei-Klassifizierung)
+Der Master-Orchestrator bildet die primäre Software-Schnittstelle beim Einlesevorgang. Er analysiert die Entropie, Datenstrukturen und Header-Signaturen der Rohdatei, ohne sie semantisch zu verarbeiten. Seine einzige Aufgabe ist die blitzschnelle Klassifizierung und Zuweisung des Datenstroms an den zuständigen Domain-Spezialisten auf Stufe 2.
+
+### 4.2 Stufe 2: Die Domain-Spezialisten (Muster-Abstraktion)
+Auf dieser Ebene operieren hochspezialisierte, isolierte KI-Module (Sub-Netze), die tief auf die Redundanzen einer spezifischen Domäne trainiert sind:
+* **Der Linguistik-Experte:** Abstrahiert Textdaten, Silbenwiederholungen und syntaktische Grammatik-Strukturen.
+* **Der Vision-Experte:** Abstrahiert Pixel-Kanten, Farbverläufe, 3D-Vektoren und zeitliche Keyframe-Veränderungen in Videoströmen.
+* **Der Akustik-Experte:** Abstrahiert harmonische Frequenzüberlagerungen und analoge Wellenformen.
+Die Experten übersetzen die Rohdaten in ein rein mathematisches, datenunabhängiges "Bedeutungs-Muster".
+
+### 4.3 Stufe 3: Die Hardware-Compiler (Geoden-Resonanz & Shard-Tracking)
+Die finale Schicht arbeitet vollständig losgelöst vom ursprünglichen Dateityp und kontrolliert die physikalisch-virtuelle Schnittstelle über zwei synchrone Triebwerke:
+1. **KI-Motor 1 (Der Geoden-Architekt):** Nimmt die abstrakten Muster von Stufe 2 und formt das 3D-Resonanzfeld der Gauss Geode™ vorab. Er erzeugt anstelle von reinem Zufallsrauschen ein strukturiertes Frequenz-Wörterbuch (z. B. harmonische 3D-Sinus-Strukturen), das perfekt auf die zu erwartende Datenart dotiert ist.
+2. **KI-Motor 2 (Der Shard-Pfadfinder):** Berechnet die 80-Bit/20-Byte Binär-Pfade (Gauss Shards™) mittels Hybrid-Multiplexing. Da die Geode durch Stufe 1 und Motor 1 perfekt vorkonditioniert ist, findet der Pfadfinder massive, ununterbrochene Flugbahnen (> 2048 Bits) auf engstem Raum. Dies drückt die Shard-Masse gegen Null, während die Kompressionsrate ins Unendliche skaliert.
 
 ---
 
