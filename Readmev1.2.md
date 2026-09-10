@@ -30,6 +30,21 @@ Die Bestimmung des räumlichen Nullpunkts kann über drei gleichwertige, adaptiv
 * **Verfahren A — Der Zentral-Marker (Physischer Anker):** Die absolute geometrische Mitte der Matrix (z. B. Koordinate `150,150,150`) wird als statische Synchronisations-Eins (`1`) fixiert. Optimal für strukturierte Sprach- und Mediendatenwürfel mit vordefinierten Scan-Pfaden.
 * **Verfahren B — Mechanische Gehäuse-Referenzierung (Nullpunkt-Führung):** Der Speicherkörper wird über eine hochpräzise mechanische Führungsnut (Formschluss) im Lesegerät fixiert. Die Nullpunkt-Bestimmung erfolgt rein hardwareseitig über kalibrierte Endschalter der Scan-Achsen.
 * **Verfahren C — Virtuelles Sternenbild-Matching (Algorithmisches Tracking):** Speziell für hochentropische Chaos-Bitmatrizen. Die Software gleicht das erfasste, zufällige Pixelmuster der Randbereiche mit dem mathematischen Soll-Muster des bekannten Generierungs-Seeds ab und errechnet die Lagekorrektur in Echtzeit.
+* 
+### 1.4 Consumer-Hardware-Schnittstelle (Das Blu-ray/DVD-Laufwerks-Repurposing)
+Zur drastischen Senkung der Hardware-Produktionskosten unterstützt der Standard das **Legacy Optical Drive Re-Purposing**. Hierbei werden handelsübliche Consumer-Blu-ray- oder DVD-Laufwerkskomponenten als VOMCS-Scanner umgerüstet.
+* **Optischer Fokus-Kopf:** Das System nutzt den nativen UV/Infrarot-Laserkopf (z. B. 405 nm bei Blu-ray) und dessen elektromagnetisch gesteuerte Voice-Coil-Linsenaufhängung. Durch das hochfrequente, vertikale Oszillieren der Linse wird der Fokus-Sweet-Spot präzise durch die einzelnen Z-Schichten der **Gauss Geode™** geschossen.
+* **Mechanischer Vorschub:** Da das Medium statisch bleibt, wird der Schrittmotor-Schlitten (der üblicherweise den Laserkopf radial über eine Disc bewegt) umgekehrt genutzt, um die Geode linear durch den starr fixierten Fokusstrahl zu führen. Dies ermöglicht hochpräzise Schicht-Scans für Hardware-Herstellungskosten von unter 20 €.
+
+### 1.5 Hochgeschwindigkeits-Abtastung (Continuous Light-Sheet Cinematography)
+Für maximale Auslesegeschwindigkeiten definiert VOMCS das kontinuierliche Lichtschnitt-Verfahren. Das Medium wird hierbei nicht für jede Bildebene mechanisch gestoppt.
+* **Dynamischer Durchflug:** Ein Präzisionsantrieb führt die Geode in einer einzigen, fließenden Bewegung durch eine stationäre, hauchdünne Infrarot-Laserscheibe (Strahltaillen-Dicke $\le 0,2 \text{ mm}$).
+* **Synchronisierte Frame-Erfassung:** Während des Durchflugs zeichnet ein hocheffizienter High-Speed-Kamerasensor (240 bis 960 Bilder pro Sekunde) die im Takt aufleuchtenden Streulicht-Defekte der Bit-Zustände (`1`) als kontinuierlichen Videostrom auf. Die nachgelagerte KI-Schicht dekodiert das Videosignal in Echtzeit, wodurch eine 500³-Geode in unter einer Sekunde vollständig materialisiert wird.
+
+### 2.2 Multi-Geoden-Schnittstellen & Räumliche Shard-Verkettung (Distributed Matrix)
+Der Standard erlaubt die Skalierung des logischen Datenraums über die physischen Grenzen eines einzelnen Speicherkörpers hinaus durch den simultanen Betrieb mehrerer Geoden (Räumliches Matrix-RAID):
+* **Nahtlose Trajektorien-Aggregation:** Die KI berechnet eine einzige, zusammenhängende **Gauss Shard™** Kette (`.bin`), deren geometrische Abtastpfade die physische Außenwand von Geode 1 durchbrechen und mathematisch exakt an den korrespondierenden Raumkoordinaten von Geode 2 fortgesetzt werden.
+* **Asymmetrisches Krypto-Splitting (Distributed Safety):** Zur Erzielung absoluter physischer Datensicherheit webt der Compiler die geraden Datenbits in Geode A und die ungeraden Datenbits in Geode B. Ein einzelner Kristall enthält steganografisch ausschließlich wertloses, mathematisch unvollständiges Rauschen. Die Rekonstruktion der Nutzinformation ist exklusiv dann möglich, wenn beide physischen Körper simultan im Sensorgitter verankert und über den gemeinsamen Shard-Schlüssel ausgelesen werden.
 
 ---
 
