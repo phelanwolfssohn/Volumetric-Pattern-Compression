@@ -41,11 +41,6 @@ Für maximale Auslesegeschwindigkeiten definiert VOMCS das kontinuierliche Licht
 * **Dynamischer Durchflug:** Ein Präzisionsantrieb führt die Geode in einer einzigen, fließenden Bewegung durch eine stationäre, hauchdünne Infrarot-Laserscheibe (Strahltaillen-Dicke $\le 0,2 \text{ mm}$).
 * **Synchronisierte Frame-Erfassung:** Während des Durchflugs zeichnet ein hocheffizienter High-Speed-Kamerasensor (240 bis 960 Bilder pro Sekunde) die im Takt aufleuchtenden Streulicht-Defekte der Bit-Zustände (`1`) als kontinuierlichen Videostrom auf. Die nachgelagerte KI-Schicht dekodiert das Videosignal in Echtzeit, wodurch eine 500³-Geode in unter einer Sekunde vollständig materialisiert wird.
 
-### 2.2 Multi-Geoden-Schnittstellen & Räumliche Shard-Verkettung (Distributed Matrix)
-Der Standard erlaubt die Skalierung des logischen Datenraums über die physischen Grenzen eines einzelnen Speicherkörpers hinaus durch den simultanen Betrieb mehrerer Geoden (Räumliches Matrix-RAID):
-* **Nahtlose Trajektorien-Aggregation:** Die KI berechnet eine einzige, zusammenhängende **Gauss Shard™** Kette (`.bin`), deren geometrische Abtastpfade die physische Außenwand von Geode 1 durchbrechen und mathematisch exakt an den korrespondierenden Raumkoordinaten von Geode 2 fortgesetzt werden.
-* **Asymmetrisches Krypto-Splitting (Distributed Safety):** Zur Erzielung absoluter physischer Datensicherheit webt der Compiler die geraden Datenbits in Geode A und die ungeraden Datenbits in Geode B. Ein einzelner Kristall enthält steganografisch ausschließlich wertloses, mathematisch unvollständiges Rauschen. Die Rekonstruktion der Nutzinformation ist exklusiv dann möglich, wenn beide physischen Körper simultan im Sensorgitter verankert und über den gemeinsamen Shard-Schlüssel ausgelesen werden.
-
 ---
 
 ## 2. Die adaptive Inode-Schicht (Logische Ebene)
@@ -75,6 +70,11 @@ Die KI und der Lese-Algorithmus nutzen zur Datenintegration, kollisionsfreien Mu
 * **Muster `0x05` — Hybrid-Multiplexing (Pattern-on-Axis-Trajektorien):** Die mathematische Abstraktionsstufe des Standards. Komplexe Suchmuster (wie die 2D-Spirale) werden nicht mehr flach projiziert, sondern direkt auf die schrägen, im Raum rotierten Achsen des virtuellen D20-Körpers gelegt. Das Muster windet sich dreidimensional um die Achse herum. Dies maximiert die effektive Pfadlänge (> 1024 Bits) auf engstem Raum, ohne jemals die physischen Außengrenzen (Wände) der Geode zu verletzen.
 ---
 
+### 2.2 Multi-Geoden-Schnittstellen & Räumliche Shard-Verkettung (Distributed Matrix)
+Der Standard erlaubt die Skalierung des logischen Datenraums über die physischen Grenzen eines einzelnen Speicherkörpers hinaus durch den simultanen Betrieb mehrerer Geoden (Räumliches Matrix-RAID):
+* **Nahtlose Trajektorien-Aggregation:** Die KI berechnet eine einzige, zusammenhängende **Gauss Shard™** Kette (`.bin`), deren geometrische Abtastpfade die physische Außenwand von Geode 1 durchbrechen und mathematisch exakt an den korrespondierenden Raumkoordinaten von Geode 2 fortgesetzt werden.
+* **Asymmetrisches Krypto-Splitting (Distributed Safety):** Zur Erzielung absoluter physischer Datensicherheit webt der Compiler die geraden Datenbits in Geode A und die ungeraden Datenbits in Geode B. Ein einzelner Kristall enthält steganografisch ausschließlich wertloses, mathematisch unvollständiges Rauschen. Die Rekonstruktion der Nutzinformation ist exklusiv dann möglich, wenn beide physischen Körper simultan im Sensorgitter verankert und über den gemeinsamen Shard-Schlüssel ausgelesen werden.
+* 
 ## 4. Die Dreistufige KI-Orchestrations-Architektur (Die Master-Schicht)
 
 Um VOMCS/GAUSS universell über alle Datentypen hinweg (Linguistik, Bilddaten, 4K-Videoströme, FLAC-Audio, CAD-Geometrien) unendlich skalierbar und kollisionsfrei zu komprimieren, operiert das Framework auf einer dreistufigen, hierarchischen KI-Architektur.
