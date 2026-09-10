@@ -32,6 +32,16 @@ The determination of the spatial zero point can be achieved via three equivalent
 * **Method B — Mechanical Casing Referencing (Zero-Point Guidance):** The storage body is secured via a high-precision mechanical alignment groove (form-fit) within the card reader. Zero-point determination is executed purely on the hardware side via calibrated limit switches of the scan axes, rendering a data-space marker obsolete.
 * **Method C — Virtual Constellation Matching (Algorithmic Tracking):** Specifically designed for high-entropy chaos bit matrices. The software matches the captured, randomized pixel pattern of the boundary regions with the mathematical target pattern of the known generation seed, calculating the spatial orientation correction in real time.
 
+### 1.4 Consumer Hardware Interface (Legacy Optical Drive Re-Purposing)
+To drastically reduce hardware manufacturing costs, the standard supports **Legacy Optical Drive Re-Purposing**, transforming commercial consumer Blu-ray or DVD drive assemblies into VOMCS scanners.
+* **Optical Focal Head:** The system utilizes the native UV/infrared laser head (e.g., 405 nm for Blu-ray) and its electromagnetically controlled voice-coil lens suspension. By vertically oscillating the lens at high frequencies, the focal sweet spot is shot precisely through the individual Z-layers of the **Gauss Geode™**.
+* **Mechanical Feed:** Since the medium remains static, the stepper-motor carriage (which traditionally moves the laser head radially across a disc) is inverted to guide the geode linearly through the rigidly fixed focal beam. This enables high-precision layer scanning for hardware manufacturing costs below $20.
+
+### 1.5 Continuous High-Speed Scanning (Continuous Light-Sheet Cinematography)
+For maximum data extraction velocities, VOMCS defines the continuous light-sheet method. The medium is not mechanically stopped for each individual image plane.
+* **Dynamic Fly-Through:** A precision drive guides the geode in a single, fluid motion through a stationary, razor-thin infrared laser sheet (beam waist thickness $\le 0.2 \text{ mm}$).
+* **Synchronized Frame Capture:** During transmission, a high-efficiency high-speed camera sensor (240 to 960 frames per second) captures the scattering light defects of the bit states (`1`) illuminating in rhythm as a continuous video stream. The subsequent AI layer decodes the video signal in real time, completely materializing a 500³ geode in under one second.
+
 ---
 
 ## 2. The Adaptive Inode Layer (Logical Dimension)
@@ -60,6 +70,10 @@ The AI and the reading algorithm utilize various geometric trajectories for data
 * **Pattern `0x04` — Virtual Polyhedron Multiplexing (D20 Angle Matching):** Inside an unstructured matrix, the AI calculates thousands of virtual icosahedrons (D20 bodies) within the Inode layer, freely rotating and translating them inside the 3D space of the chaos matrix. Bits are extracted from the chaos along the space-cutting principal axes. To compress a subsequent file, the AI refines the tilt of a virtual polyhedron until its axes fit the bitstream of the target data exactly like a key in a lock.
 * **Pattern `0x05` — Hybrid Multiplexing (Pattern-on-Axis Trajectories):** The highest mathematical abstraction tier of the standard. Complex search patterns (such as the 2D spiral) are no longer projected flatly, but are mapped directly onto the oblique, spatially rotated axes of the virtual D20 body. The pattern winds three-dimensionally around the axis, maximizing the effective path length (> 1024 bits) within a highly confined spatial volume without ever violating the physical outer boundaries (walls) of the geode.
 
+### 2.2 Multi-Geode Interfaces & Spatial Shard Chaining (Distributed Matrix)
+The standard allows scaling of the logical data space beyond the physical boundaries of a single storage body through the simultaneous operation of multiple geodes (Spatial Matrix RAID):
+* **Seamless Trajectory Aggregation:** The AI calculates a single, cohesive **Gauss Shard™** chain (`.bin`), whose geometric scanning pathways breach the physical outer wall of Geode 1 and continue mathematically with absolute precision at the corresponding spatial coordinates of Geode 2.
+* **Asymmetric Cryptographic Splitting (Distributed Safety):** To achieve absolute physical data security, the compiler weaves even data bits into Geode A and odd data bits into Geode B. An isolated crystal steganographically contains nothing but worthless, mathematically incomplete noise. Reconstructing the payload is exclusively possible when both physical bodies are simultaneously anchored in the sensor lattice and extracted via the shared shard key.
 ---
 
 ## 4. The Three-Tier AI Orchestration Architecture (The Master Layer)
