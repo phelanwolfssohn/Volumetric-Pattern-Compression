@@ -161,4 +161,11 @@ VOMCS breaks the traditional dogma of data transmission. Instead of sending volu
 
 ## ⚖️ License & Legal Disclaimer (State of the Art)
 This concept is hereby published as **Open Source** to the general public. Upon its publication on GitHub, this technology officially becomes part of the global **State of the Art (Prior Art)**. Any exclusive patenting or commercial monopolization of this process or algorithms derived from it by third parties is legally barred.
-Terms of Use (CC BY-NC 4.0):Non-Profit & Research: Private, scientific, and non-profit use, modification, digital simulation, and further development are expressly permitted and free of charge.Commercial Use: Any commercial exploitation, use in business operations (whether physical or as a software implementation), or integration into proprietary products is strictly prohibited without prior written and fee-based licensing from the copyright holder.
+Terms of Use (CC BY-NC 4.0):Non-Profit & Research: Private, scientific, and non-profit use, modification, digital simulation, and further development are expressly permitted and free of charge.Commercial Use: Any commercial exploitation, use in business operations (whether physical or as a software implementation), or integration into proprietary products is strictly prohibited without prior written and fee-based licensing from the copyright holder
+* **Intellectual and Proprietary Independence:** This framework was conceived, designed, 
+  and developed entirely as a private research project. All conceptual and algorithmic 
+  contributions were generated strictly outside of contractual working hours, independent 
+  of any corporate or commercial assignment, and without the utilization of any third-party 
+  corporate infrastructure, networks, or proprietary resources. Intellectual priority and 
+  sole ownership remain exclusively with the author.
+  .
