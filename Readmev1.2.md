@@ -164,3 +164,8 @@ Dieses Konzept wird hiermit als **Open Source** der Allgemeinheit zur Verfügung
 * **Non-Profit & Forschung:** Die private, wissenschaftliche und gemeinnützige Nutzung, Modifikation, digitale Simulation und Weiterentwicklung ist ausdrücklich erlaubt und kostenfrei.
 * **Kommerzielle Nutzung:** Jede kommerzielle Verwertung, Nutzung im geschäftlichen Betrieb (physisch oder als Software-Implementierung) oder die Einbindung in proprietäre Produkte ist ohne vorherige, schriftliche und kostenpflichtige Lizenzierung durch den Urheber untersagt.
 ---
+* **Urheberrechtliche Unabhängigkeit:** Dieses Framework wurde vollständig als privates 
+  Forschungsprojekt außerhalb von vertraglichen Arbeitszeiten, außerhalb von geschäftlichen 
+  Auftragsverhältnissen und ohne Nutzung von Unternehmensinfrastrukturen Dritter konzipiert 
+  und entwickelt. Die intellektuelle Priorität liegt vollumfänglich beim Urheber.
+  
