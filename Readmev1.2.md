@@ -135,6 +135,10 @@ Zur Wahrung der Erfindungshöhe und zur rechtlichen Absicherung gegen Fehlinterp
 * **Klassische Verschlüsselung:** Ein digitaler Schlüssel füttert einen mathematischen Algorithmus, um eine lange Reihe von Zufallszahlen zu generieren.
 * **Das VOMCS-Prinzip:** Der 3D-Würfel dient als physischer, unknackbarer Datentresor. Da der Rotationsvektor in den Inodes bestimmt, wie die Spirale abbiegt oder wo der D20-Körper ansetzt, entstehen aus den exakt gleichen Bits Milliarden unterschiedlicher Schlüsselketten. Ohne die exakten mathematischen Winkel- und Musterdaten ist es unmöglich, die versteckten Layer aus dem Chaos-Rauschen zuknacken.
 
+#### Das "Unga-Bunga-Steinbruch-Paradoxon"
+* **Klassische Systeme (Die Briefdinosaurier):** Claude Shannon sieht einen riesigen, tonnenschweren Stein (deine Datei). Er nimmt einen Vorschlaghammer, schlägt unter brutalem Kraftaufwand so lange darauf ein, bis der Stein in kleinere, immer noch schwere Brocken zerbricht, und zwingt den erschöpften Briefdinosaurier, diesen Schutt mühsam durch das Nadelöhr des Netzwerkkabels zum Empfänger zu schleppen.
+* **Das VOMCS/GAUSS-Prinzip:** Warum den Stein bewegen, wenn der gesamte Steinbruch (die vor-konditionierte **Gauss Geode™**) schon längst im Garten des Empfängers steht? Der Compiler schlägt überhaupt nichts kurz. Er zeichnet lediglich eine federleichte, präzise Schatzkarte auf ein winziges Stück Pergament ( **Gauss Shard™**). Der Briefdinosaurier fliegt entspannt und federleicht mit der Karte durch das Netz. Der Empfänger nimmt die Karte, läuft in seinen eigenen Steinbruch, holt sich den fetten Brocken fehlerfrei heraus und der Dinosaurier feiert glücklich Feierabend!
+* 
 ---
 
 ## 🛠️ Low-Cost-Hardware-Nachweis & Skalierungsmodelle
