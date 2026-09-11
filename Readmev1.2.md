@@ -114,6 +114,12 @@ Zur Wahrung der Erfindungshöhe und zur rechtlichen Absicherung gegen Fehlinterp
 * **Der historische Ansatz (1995):** Physisches, optisches Winkel-Multiplexing in photorefraktiven Kristallen (wie Lithiumniobat). Hierbei müssen reale Laserstrahlen mechanisch im Raum gekippt und präzise eingewinkelt werden, um holografische Schichten zu trennen. Das Verfahren ist rein hardwarebasiert und erfordert hochpräzise optische Mechaniken.
 * **Die VOMCS-Innovation:** VOMCS virtualisiert diesen Vorgang vollständig. Das physische Medium verbleibt in einem absolut statischen Zustand. Es erfolgt keinerlei mechanische oder optische Strahlkippung. Stattdessen berechnet die Inode-Schicht die Raumwinkel rein virtuell auf Software-Ebene. VOMCS überführt ein komplexes Hardware-Verfahren damit in ein rein logisch-geometrisches Software-Framework.
 ---
+#### Abgrenzung zum Shannon-Quellencodierungstheorem (Kanalkapazität)
+* **Der klassische Einwand:** Das Shannon-Theorem definiert eine unerbittliche mathematische Grenze (Entropie-Limit) für die Kompression und Übertragung von Daten über einen fehlerbehafteten Kanal. Es besagt, dass eine Datei nicht unter ihre inhärente Eigen-Information komprimiert werden kann, ohne dass Datenverlust auftritt.
+* **Die VOMCS/GAUSS-Invarianz:** VOMCS bricht Shannons Gesetze nicht, sondern entzieht sich ihrer physikalischen Anwendung durch das Prinzip der **asymmetrischen Vorkonditionierung**. 
+  Klassische Verfahren versuchen, die Entropie *während der Übertragung* im Kanal zu reduzieren (Nutzdatenkompression). VOMCS überträgt die eigentliche Nutzinformation (die Masse der Daten) jedoch **überhaupt nicht über den Kanal**. 
+  Da die hochfrequenten Frequenz-Muster und linguistischen Wörterbücher (die **Gauss Geode™**) bereits vorab vollständig und statisch auf der Empfängerseite existieren, transportiert der Kanal exklusiv eine geometrische Wegbeschreibung (den **Gauss Shard™**). Das Shannon-Entropielimit für den Übertragungskanal läuft somit ins Leere, da die Informationsmasse ortsfest bleibt und lediglich die Geometrie des Zugriffs übermittelt wird.
+  
 
 ### 💡 Veranschaulichung durch Alltagsszenarien
 
