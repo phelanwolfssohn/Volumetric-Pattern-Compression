@@ -40,7 +40,12 @@ Zur drastischen Senkung der Hardware-Produktionskosten unterstützt der Standard
 Für maximale Auslesegeschwindigkeiten definiert VOMCS das kontinuierliche Lichtschnitt-Verfahren. Das Medium wird hierbei nicht für jede Bildebene mechanisch gestoppt.
 * **Dynamischer Durchflug:** Ein Präzisionsantrieb führt die Geode in einer einzigen, fließenden Bewegung durch eine stationäre, hauchdünne Infrarot-Laserscheibe (Strahltaillen-Dicke $\le 0,2 \text{ mm}$).
 * **Synchronisierte Frame-Erfassung:** Während des Durchflugs zeichnet ein hocheffizienter High-Speed-Kamerasensor (240 bis 960 Bilder pro Sekunde) die im Takt aufleuchtenden Streulicht-Defekte der Bit-Zustände (`1`) als kontinuierlichen Videostrom auf. Die nachgelagerte KI-Schicht dekodiert das Videosignal in Echtzeit, wodurch eine 500³-Geode in unter einer Sekunde vollständig materialisiert wird.
-
+### 1.6 Interplanetare Firmware-Substitution (Deep-Space-Operating-System-Geode)
+Für die Kommunikation über extrem bandbreitenbeschränkte, interplanetare Netzwerke (z. B. das Deep Space Network zum Mars) spezifiziert VOMCS die Nutzung von **statischen Firmware-Geoden**. Hierbei muss kein physisches Speichermedium neu zum Zielplaneten transportiert werden.
+* **Das residente Wörterbuch:** Als stationäre **Gauss Geode™** wird der unveränderliche Maschinencode des residenten Echtzeit-Betriebssystems (z. B. VxWorks) direkt im Flash-Speicher einer Mars-Sonde oder eines Rovers genutzt. Eine bitgenaue Kopie dieses Betriebssystems existiert permanent auf den Servern der Bodenstation (z. B. NASA JPL).
+* **Der Hybrid-Multiplexing-Hebel:** Sollte die schiere Bit-Dichte des Betriebssystems für extrem große Datensätze (wie multispektrale 4K-Rohdaten) nicht ausreichen, schaltet der Compiler auf **Hybrid-Multiplexing (Muster `0x05`)**. Der *Shard-Pfadfinder* projiziert die komplexen Suchmuster (wie die Fibonacci-Spirale) direkt auf die im Raum rotierten D20-Achsen innerhalb des binären Codesegments. Das Muster windet sich dreidimensional um die Achse herum, wodurch kilometerlange Bit-Ketten auf engstem Raum im Betriebssystem konzentriert werden, ohne jemals dessen Adressgrenzen zu verletzen.
+* **Zero-Payload Deep-Space-Transfer:** Anstatt Megabytes an Bilddaten durch das All zu funken, sendet die Sonde eine hochkomprimierte, wenige Kilobyte große binäre Shard-Kette (`.bin`). Die Bodenstation empfängt die Vektoren, jagt sie durch die identische Betriebssystem-Kopie auf der Erde, entrollt die 3D-Spiralen entlang der berechneten Winkel und materialisiert das Bild fehlerfrei im RAM. Dies senkt die benötigte Antennen-Sendezeit im Deep Space um bis zu 99 %.
+* 
 ---
 
 ## 2. Die adaptive Inode-Schicht (Logische Ebene)
