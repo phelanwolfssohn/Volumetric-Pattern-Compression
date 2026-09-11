@@ -115,7 +115,12 @@ To preserve the inventive step and ensure legal protection against misinterpreta
 * **The Historical Approach (1995):** Physical, optical angular multiplexing in photorefractive crystals (such as lithium niobate). This requires real laser beams to be mechanically tilted and precisely angled in space to separate holographic layers, relying on high-precision optical mechanics.
 * **The VOMCS Innovation:** VOMCS virtualizes this process entirely. The physical medium remains in an absolute static state, with zero mechanical or optical beam tilting. Instead, the Inode layer calculates the spatial angles purely virtually in software, transitioning a complex hardware procedure into a purely logical-geometric software framework.
 ---
-
+#### Differentiation from the Shannon Source Coding Theorem (Channel Capacity)
+* **The Classical Objection:** Shannon's theorem defines an unforgiving mathematical boundary (entropy limit) for the compression and transmission of data over a noisy channel. It dictates that a file cannot be compressed below its inherent self-information without incurring data loss.
+* **The VOMCS/GAUSS Invariance:** VOMCS does not violate Shannon's laws; rather, it bypasses their physical application through the principle of **asymmetric pre-conditioning**.
+  Conventional methods attempt to minimize entropy *during transmission* within the channel (payload compression). VOMCS, however, **does not transmit the actual payload (the mass of the data) over the channel at all**.
+  Because the high-frequency pattern dictionaries (the **Gauss Geode™**) already exist completely and statically on the receiver's side prior to transmission, the channel exclusively transports a geometric routing guide (the **Gauss Shard™**). Shannon's entropy limit for the transmission channel therefore becomes obsolete, as the mass of information remains stationary and only the geometry of the access vector is communicated.
+  
 ### 💡 Illustration via Everyday Analogies
 
 #### The "Book Analogy" (VOMCS vs. Classical ZIP Compression)
