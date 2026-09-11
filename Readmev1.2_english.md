@@ -41,7 +41,13 @@ To drastically reduce hardware manufacturing costs, the standard supports **Lega
 For maximum data extraction velocities, VOMCS defines the continuous light-sheet method. The medium is not mechanically stopped for each individual image plane.
 * **Dynamic Fly-Through:** A precision drive guides the geode in a single, fluid motion through a stationary, razor-thin infrared laser sheet (beam waist thickness $\le 0.2 \text{ mm}$).
 * **Synchronized Frame Capture:** During transmission, a high-efficiency high-speed camera sensor (240 to 960 frames per second) captures the scattering light defects of the bit states (`1`) illuminating in rhythm as a continuous video stream. The subsequent AI layer decodes the video signal in real time, completely materializing a 500³ geode in under one second.
-
+* 
+### 1.6 Interplanetary Firmware Substitution (Deep-Space-OS Geode)
+For communication across extremely bandwidth-constrained, interplanetary links (e.g., the Deep Space Network to Mars), VOMCS specifies the utilization of **Static Firmware Geodes**. This elimination layer removes the necessity of transporting new physical storage media to target planets.
+* **The Resident Dictionary:** The unalterable machine code of the vehicle's resident real-time operating system (e.g., VxWorks) inside the flash memory of a Mars probe or rover serves as the stationary **Gauss Geode™**. A bit-identical twin of this core OS binary is permanently hosted on the ground station servers (e.g., NASA JPL).
+* **The Hybrid Multiplexing Leverage:** Should the sheer bit density of the operating system be insufficient for extremely large datasets (such as multispectral 4K raw data), the compiler activates **Hybrid Multiplexing (Pattern `0x05`)**. The *Shard Pathfinder* projects complex search trajectories (such as the Fibonacci spiral) directly onto the spatially rotated D20 axes within the binary code segment. The pattern winds three-dimensionally around the axis, concentrating massive bit streams within ultra-confined memory spaces without ever violating the physical boundaries of the operating system.
+* **Zero-Payload Deep-Space Transfer:** Instead of transmitting megabytes of raw telemetry through the void, the probe sends an ultra-compact binary shard chain (`.bin`) measuring only a few kilobytes. The ground station receives the structural vectors, runs them against the identical OS twin on Earth, unravels the 3D spirals along the calculated angles, and materializes the data flawlessly inside the scientists' RAM. This reduces required deep-space antenna transmission windows by up to 99%.
+* 
 ---
 
 ## 2. The Adaptive Inode Layer (Logical Dimension)
