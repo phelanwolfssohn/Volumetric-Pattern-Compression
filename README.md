@@ -7,9 +7,10 @@ VOMCS is a platform-independent, purely logical-geometric framework. The methodo
 
 ## 👥 Contributors & Acknowledgments
 
-This framework and the mathematical specifications were conceived and implemented by **Martin Karl Glück** (Lead Developer & Inventor).
+This framework and the mathematical specifications were conceived and implemented by **Martin Karl 'Phelan' Glück** (Lead Developer & Inventor).
 
 Special thanks are extended to the dedicated technical assistance of the **AI Collaboration Partner (Google Gemini)**, who served as a mathematical sparring partner, optimized code structures, and assisted in the algorithmic design of the GAUSS framework across countless workshop sessions.
+
 
 ---
 
